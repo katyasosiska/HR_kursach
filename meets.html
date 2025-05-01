@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Meets | HR-агентство</title>
+</head>
+<body>
+    <div class="container">
+        <div id="shadowModal">
+            <div id="modalMeet">
+                <button id="closeModal">&times;</button><br><br>
+                <form class="meets-form">
+                    <input type="text" placeholder="Meet name"><br>
+                    <input type="text" placeholder="Candidate name"><br>
+                    <input type="date"><br>
+                    <input type="time"><br>
+                    <button id="creatNewMeet">
+                        Create meet
+                    </button>
+                </form>
+            </div>
+        </div>
+        <button id="addNewMeet">+</button>
+    </div>
+        
+        <header>
+            <div class="container">
+                <div class="header meetheader">
+                    <div class="header__line">
+                        <input type="checkbox" id="burger-toggle" class="burger-toggle">
+                    <label for="burger-toggle" class="burger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <div class="overlay"></div>
+                  
+                    <nav class="header__nav" id="nav-menu">
+                        <label for="burger-toggle" class="close-icon">&times;</label>
+                        <div class="header-nav-group">
+                            <a href="/contact.html"><img src="./img/logo.png" alt="logo"></a>
+                            <a class="nav__item" href="/main.html">home</a>
+                            <a class="nav__item" href="/about.html">about</a>
+                            <a class="nav__item" href="/meets.html">meets</a>
+                            <a class="nav__item" href="#">ancets</a>
+                            <a href="#" class="nav__item--button" id="contactBtn">contact us</a>
+                        </div>
+                    </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+    <div class="container">
+        <div class="toolbar">
+            <button id="sortMeets">Sort by date</button>
+        </div>
+
+        <div id="main"></div>
+
+        <div id="editModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span id="closeEditModal" class="close">&times;</span>
+                <h2>Edit Meet</h2>
+                <form id="editForm">
+                    <input type="text" id="editTitle" placeholder="Meet name"><br><br>
+                    <input type="text" id="editClient" placeholder="Client name"><br>
+                    <input type="date" id="editDate"><br>
+                    <input type="time" id="editTime"><br>
+                    <button type="submit">Save changes</button>
+                    <button id="deleteMeet">Delete meet</button>
+                </form>
+            </div>
+        </div> 
+
+        <div id="detailsModal" class="modal">
+            <div class="modal-content">
+                <button id="closeDetailsModal">&times;</button><br><br>
+                <h2>Подробности встречи</h2>
+                <p><strong>Название:</strong> <span id="detailTitle"></span></p>
+                <p><strong>Клиент:</strong> <span id="detailClient"></span></p>
+                <p><strong>Дата:</strong> <span id="detailDate"></span></p>
+                <p><strong>Время:</strong> <span id="detailTime"></span></p>
+                <p><strong>Место:</strong> <span id="detailPlace"></span></p>
+                <p><strong>Ответственный сотрудник:</strong> <span id="detailManager"></span></p>
+                <p><strong>Комментарий:</strong> <span id="detailComment"></span></p>
+            </div>
+        </div>   
+    </div>
+
+    <div id="contactModal" class="modal">
+        <div class="contact-modal-content">
+            <span id="modalClose" class="close">&times;</span>
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your name" required class="inputModal"><br><br>
+                <input type="email" placeholder="Your email" required class="inputModal"><br><br>
+                <textarea placeholder="Your message" rows="3" required class="textareaModal"></textarea><br><br>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <img class="footer__logo" src="./img/logo.png" alt="logo">
+                <div class="footer__nav">
+                    <a class="footer__nav--item" href="./main.html">home</a>
+                    <a class="footer__nav--item" href="./about.html">about</a>
+                    <a class="footer__nav--item third" href="/meets.html">meets</a>
+                    <a class="footer__nav--item fourth" href="#">ancets</a>
+                </div>
+                <div class="footer__list">
+                    <ul>
+                        <li>987 Hillcrest Lane</li>
+                        <li> Irvine, CA</li>
+                        <li>California 92714</li>
+                        <li>Call Us : 949-833-7432</li>
+                    </ul>
+                </div>
+                <div class="footer__socials">
+                    <img src="./img/facebook.svg" alt="facebook">
+                    <img src="./img/pinterest.svg" alt="pinterest">
+                    <img src="./img/twitter.svg" alt="twitter">
+                </div>
+                <div class="footer__text">
+                    <p>Copyright 2020. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
