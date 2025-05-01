@@ -1328,9 +1328,7 @@ button a{
         font-size: 32px;
     }
     .first__section--image img{
-        position: relative;
-        left: 310px;
-        top: -268px;
+        display: none;
     }
     .group2__cards {
         margin-top: 190px;
@@ -1354,7 +1352,7 @@ button a{
         text-align: center;
     }
     .header {
-        height: 496px;
+        height: 521px;
     }
     .header__miniGroup hr {
         display: none;
